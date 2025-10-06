@@ -1,5 +1,5 @@
 'use client';
-import '../../../../components/Nav.css';
+import '../../../components/Nav.css';
 import React from 'react'
 import Swal from 'sweetalert2';
 import { useState, useEffect } from 'react';
