@@ -94,7 +94,7 @@ const page = () => {
       transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}>
               <h1 style={{marginTop:30}} className='text-center text-3xl text-blue-950 font-bold'>The Registration Interface</h1>
               <br />
-              {/* <button><Link style={{textDecoration:'none', color:'black'}} href='/pages/librarian/registerdashboard/add'>Add</Link></button> */}
+              <button><Link style={{textDecoration:'none', color:'black'}} href='/pages/librarian/registerdashboard/add'>Add</Link></button>
               <table className='table'>
                 <thead>
                  <tr>
