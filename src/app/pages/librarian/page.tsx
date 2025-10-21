@@ -10,6 +10,29 @@ import { useInView } from 'react-intersection-observer';
 import Sidebar from '@/app/components/Sidebar';
 import { MdLightbulb } from "react-icons/md";
 import { useRouter } from 'next/navigation';
+import { GiArchiveRegister } from 'react-icons/gi';
+import { MdLibraryBooks } from 'react-icons/md';
+import { MdLightMode } from 'react-icons/md';
+import { PieChart, Pie, Cell, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Legend } from "recharts"
+type Book = {
+  id:number;
+  name:string;
+  price:string;
+  description:string;
+}
+const data = [
+  { name: "Books", quantity: 50 },
+  { name: "Renew", quantity: 30 },
+  { name: "Request", quantity: 20 },
+  { name: "Reserve", quantity: 10 },
+  { name: "Issues", quantity: 30},
+  { name: "Borrow Made", quantity:25},
+  { name: "Reserves Made", quantity:15},
+  { name: "Renew Made", quantity:20},
+  { name: "Registers", quantity:32},
+]
+
+const COLORS = ["#32CD32", "#FFD700", "#FF8C00", "#00CED1"]
 const page = () => {
 
            const variants = {
@@ -30,27 +53,52 @@ const page = () => {
           
          <Sidebar />
          <div className='flex flex-wrap justify-center'>
-             {/* <button><Link style={{textDecoration:'none', color:'black'}} href='/'>Logout</Link></button> */}
-         </div>
+            </div>
             </div>
              <div className='right-book'>
                 <h1 style={{marginTop:20, marginBottom:30}} className=' text-blue-950 text-3xl font-bold'>Librarian</h1>
              <div className='right-sub flex flex-wrap justify-center text-center text-xl'>
             <div  className='right1'>
-            <a href='/pages/librarian/registerdashboard'>
+            <a style={{fontSize:14}} href='/pages/librarian/registerdashboard'>
+            <GiArchiveRegister size={20} className='inline' />
              Register
             </a>
               </div>
                <div  className='right2'>
-              <a href='/pages/librarian/bookdashboard'>
+              <a style={{fontSize:14}}  href='/pages/librarian/bookdashboard'>
+              <MdLibraryBooks size={20} className='inline' />
                 Books</a>
               </div>
                <div  className='right3'>
-                   <a href='/pages/librarian/renewdashboard'>
+                   <a style={{fontSize:14}} href='/pages/librarian/renewdashboard'>
+                   <MdLightMode size={20} className='inline' />
                       Renew
                    </a>
               </div>
              </div>
+
+                 <div style={{marginTop:70}} className=" rounded-2xl w-full max-w-5xl mx-auto">
+                   <div className="bg-white p-4 rounded-xl ">
+                     <h2 className="text-center font-semibold text-gray-700 mb-4">
+                       Inventory Quantity
+                     </h2>
+                     <div className="w-full h-64">
+                       <ResponsiveContainer>
+                         <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                           <CartesianGrid strokeDasharray="3 3" />
+                           <XAxis dataKey="name" />
+                           <YAxis />
+                           <Tooltip />
+                           <Legend />
+                           <Bar dataKey="quantity" fill="var(--color-blue-900)" barSize={50} radius={[10, 10, 0, 0]} />
+                         </BarChart>
+                       </ResponsiveContainer>
+                     </div>
+                   </div>
+             
+                 </div>
+
+            
 
               {/* <div style={{marginTop:50}} className='right-sub flex flex-wrap justify-center text-center text-xl'>
             <div className='right1'>
@@ -91,6 +139,7 @@ const page = () => {
               
               
              </div>
+          
         </motion.div>
       </div>
 

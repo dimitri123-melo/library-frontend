@@ -116,10 +116,10 @@ const page = () => {
             <br />
             <p className='text-center '>Who are you ?</p>
           <select value={Register.role} onChange={(e) => setRegister({...Register, role:e.target.value})}>
-            <option disabled>Who are you ?</option>
-            <option value='Student'>Student</option>
-            <option value='Teacher'>Teacher</option>
-            <option value='Librarian'>Librarian</option>
+            <option value="">Who are you ?</option>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Librarian">Librarian</option>
           </select>
           <br />
           <br />

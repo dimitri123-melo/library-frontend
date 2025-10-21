@@ -9,7 +9,11 @@ import Swal from 'sweetalert2';
 import { useRouter } from 'next/navigation';
 import { useInView } from 'react-intersection-observer';
 import {motion} from 'framer-motion';
-
+type Book = {
+  id:number;
+  name:string;
+  author:string;
+}
 const page = () => {
 
     const [addBook, setaddBook] = useState({
@@ -77,7 +81,7 @@ const page = () => {
       threshold: 0.2,
     });
 
-    const [book, setbook] = useState([])
+    const [book, setbook] = useState<Book[]>([])
   
   const getAllBooks = () =>{
   axios.get("http://localhost:8080/api/book").then((res) =>{
@@ -171,7 +175,7 @@ const page = () => {
                       <td>{b.author}</td>
                         <td>
                             {/* <button style={{padding:5, width:'70px', backgroundColor:'var(--color-blue-950)', color:'white', marginTop:-12}}><Link style={{textDecoration:'none', color:'white'}} href='/pages/librarian/bookdashboard/edit'>update</Link></button> */}
-                            <button  onClick={() => deleteBook(b.id)} style={{padding:5, width:'70px', marginLeft:5, backgroundColor:' var(--color-red-800)', color:'white'}}>Delete</button>                   
+                            <button  onClick={() => deleteBook(b.id)} style={{padding:5, width:'60px', marginLeft:5, backgroundColor:' var(--color-red-800)', color:'white'}}>Delete</button>                   
                         </td>
                     </tr>
                    ))}

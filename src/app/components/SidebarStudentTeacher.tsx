@@ -14,47 +14,47 @@ const SidebarStudentTeacher = () => {
     <div>
             <ul>
                     <li><MdLibraryBooks size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/'>Books</Link>
+                    <Link style={{marginLeft:2, fontSize:14 }} href='/'>Books</Link>
                     </li>
 
                     <li><CiGift size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/borrow'>Borrow</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/borrow'>Borrow</Link>
                     </li>
 
                     <li><LuHistory size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/loanHistory'>History</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/loanHistory'>History</Link>
                     </li>
 
                     <li><FaBoxTissue size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/issue'>Borrow Feedback</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/issue'>Borrow Feedback</Link>
                     </li>
 
                     <li><TbReservedLine size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/reserve'>Reserve</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/reserve'>Reserve</Link>
                     </li>
 
                     <li><TbReservedLine size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/reserveFeedback'>Reserve Feedback</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/reserveFeedback'>Reserve Feedback</Link>
                     </li>
 
                      <li><VscGitPullRequestGoToChanges size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/request'>Request</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/request'>Request</Link>
                     </li>
 
                      <li><VscGitPullRequestGoToChanges size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/requestFeedback'>Request Feedback</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/requestFeedback'>Request Feedback</Link>
                     </li>
 
                       <li><VscGitPullRequestGoToChanges size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/renew'>Renew</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/renew'>Renew</Link>
                     </li>
 
                        <li><VscGitPullRequestGoToChanges size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/renewalFeedback'>Renew Feedback</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/renewalFeedback'>Renew Feedback</Link>
                     </li>
 
                     <li><IoNotifications size={20} className='inline' />
-                    <Link style={{marginLeft:2,}} href='/pages/studentsTeachers/notification'>Notifications</Link>
+                    <Link style={{marginLeft:2, fontSize:14}} href='/pages/studentsTeachers/notification'>Notifications</Link>
                     </li>
                   </ul>
     </div>

@@ -1,4 +1,3 @@
-
 'use client';
 import '../../components/Nav.css';
 import React, { useEffect } from 'react'
@@ -9,6 +8,8 @@ import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
+import { MdEmail, MdLock } from "react-icons/md";
+
 interface data {
     name: string;
     email:string;
@@ -74,7 +75,7 @@ const page = () => {
   }
   return (
    <div>
-          <div className='overall-login bg-blue-900 flex flex-wrap justify-center'>
+          <div className='overall-login  flex flex-wrap justify-center'>
             <br />
             <motion.div className='login'
       ref={ref}
@@ -83,20 +84,20 @@ const page = () => {
       transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} >
             <h1>Sign In</h1>
             <br />
-          
+        <div className='relative'>
+              <MdEmail className="absolute left-10 top-6 -translate-y-1/2 text-gray-500" size={20} />
           <input type='email' value={login.email} placeholder='Enter Email' onChange={(e) => setlogin({...login, email:e.target.value})} />
-          <br />
-            <br />
-            
+        </div> 
+         <br />
+         <div className='relative'>
+           <MdLock  className="absolute left-10 top-6 -translate-y-1/2 text-gray-500" size={20} />
           <input type='password' value={login.password} placeholder='Enter Password' onChange={(e) => setlogin({...login, password:e.target.value})} />
-          <br />
-          <br />
-          <button onClick={handleSubmit} className='bg-blue-900 text-white'>Submit</button>
-          <h2 style={{marginTop:20}} className='text-center'>Do not have an Account? <Link className='text-blue-500 font-bold' href='/pages/register'>Sign Up</Link></h2>
+         </div> <br />
+          <button onClick={handleSubmit} className='bg-blue-900 text-white' style={{marginBottom:30}}>Submit</button>
+         <br />
         </motion.div>
         <br />
-          <br />
-            <br />
+<br />
         </div>
     </div>
   )

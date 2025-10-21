@@ -3,9 +3,11 @@
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
 }
-/* body{
-    font-size: 17;
-} */
+body{
+    font-size: 13;
+    
+    font-family: 'Times New Roman', Times, serif;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -36,10 +38,12 @@ html{
 .Nav ul li{
     display: inline-block;
     padding: 12px 14px;
+    font-size: 13;
 }
 .Nav ul li a{
     text-decoration: none;
     color: black;
+   
 }
 .Nav ul li a:hover{
     color: white;
@@ -216,8 +220,9 @@ border-top-right-radius: 100; */
   margin-right: 300; */
   margin-top: 30;
 background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 margin-bottom: 400;
-border-radius: 20;
+border-radius: 10;
 
 /* border-bottom-left-radius: 100;
 border-top-right-radius: 100; */
@@ -236,6 +241,7 @@ border-top-right-radius: 100; */
     border: 1px solid var(--color-blue-400);  
     border-radius: 10px; 
     margin-top: 10; 
+    font-size: 15;
 }
 .login select{
     text-align: center;
@@ -255,6 +261,7 @@ border-top-right-radius: 100; */
     border-radius: 10px; 
  cursor: pointer;
     margin-top: 15; 
+    font-size: 15;
 }
 .login h2{
     margin-bottom: 30;
@@ -389,7 +396,7 @@ details[open] summary{
     display: flex;
     flex-wrap: wrap;
     gap: 10;
-    background-color: aliceblue;
+    background-color: white;
     /* background-color: rgb(237, 245, 252); */
     /* background-color: rgb(198, 217, 234); */
 }
@@ -406,7 +413,7 @@ details[open] summary{
 .left-book ul li{
     padding: 10;
     color: white;
-    font-size: 17;
+    font-size: 15;
     margin-left: 20;
     cursor: pointer;
     text-decoration: none;
@@ -446,7 +453,9 @@ details[open] summary{
     width: calc(15%);
     cursor: pointer;
     margin-bottom: 5;
-  
+}
+.right-book h1{
+    font-size: 18;
 }
 .right-book button:hover{
    color: white;
@@ -455,6 +464,8 @@ details[open] summary{
     width: calc(100%);
     background-color: white;
     margin-top: 20;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+      border-radius: 10;
 }
 .right-book th{
       width: calc(100% - 20px);
@@ -464,6 +475,7 @@ details[open] summary{
 .right-book tr{
       width: calc(100% - 20px);
     padding: 7;
+    
 }
 .right-book td{
       width: calc(100% - 20px);
@@ -484,14 +496,19 @@ details[open] summary{
     gap: 30;
        /* background-color: rgb(198, 217, 234); */
 }
+.right-sub h1{
+    font-size: 14;
+}
 .right1,.right2,.right3{
     width: calc(30% - 20px);
     padding: 30px;
   cursor: pointer;
    border-radius: 2;
   background-color: white;
-  box-shadow: 0 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 5;
 }
+
 .right1:hover,.right2:hover,.right3:hover{
     background-color: var(--color-blue-950);
     color: white;
@@ -509,7 +526,8 @@ details[open] summary{
 margin-bottom: 400;
 border-radius: 20;
 background-color: white; 
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      border-radius: 10;
  width:calc(50% - 20px);
 }
 .borrow h1{
